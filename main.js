@@ -1,3 +1,7 @@
-const lebih_dari = null;
+function convertCelciusToFahrenheit(temperature){
+    const temperatureInFahrenheit = (temperature * 9/5) + 32;
 
-console.log(lebih_dari);
+    console.log('Hasil Konversi: ', temperatureInFahrenheit);
+}
+
+convertCelciusToFahrenheit(175)
