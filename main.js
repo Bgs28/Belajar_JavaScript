@@ -115,6 +115,7 @@ function checkNilai(Nilais){
     }
 }
 
+
 try {
     const NilaiSiswa = [97,23,67,78,89];
     checkNilai(NilaiSiswa);
