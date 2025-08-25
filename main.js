@@ -67,23 +67,57 @@
 
 // myfunc(1, 'Bagas', 'Hou Yi', 'Dhontol');
 
-const employees = [
-  {
-    name: 'Fulan',
-    email: 'fulan@dicoding.com',
-    joinYear: 2020,
-  },
-];
+// const employees = [
+//   {
+//     name: 'Fulan',
+//     email: 'fulan@dicoding.com',
+//     joinYear: 2020,
+//   },
+// ];
 
-function addEmployee(name, email, joinYear) {
-    const newEmployee = {
-        name: name,
-        email: email,
-        joinYear: joinYear,
-    };
-    employees.push(newEmployee);
+// function addEmployee(name, email, joinYear) {
+//     const newEmployee = {
+//         name: name,
+//         email: email,
+//         joinYear: joinYear,
+//     };
+//     employees.push(newEmployee);
+// }
+
+// addEmployee('Bagas', 'Bagas@gmail.com', 2024);
+
+// console.log(employees);
+
+// ==> Flow Controls
+
+function checkNilai(Nilais){
+    for (let i = 0; i < Nilais.length; i++){
+        if(typeof Nilais[i] !== "number"){
+            throw new Error("Invalid Input. Tolong Masukkan Nilai Array");
+        }
+
+        const Nilai = Nilais[i];
+        let predikat;
+
+        if(Nilai >= 90){
+            predikat = "A";
+        }else if(Nilai >= 80){
+            predikat = "B";
+        }else if(Nilai >= 70){
+            predikat = "C";
+        }else if(Nilai >= 60){
+            predikat = "D";
+        }else{
+            predikat = "E";
+        }
+
+        console.log(`Nilai ${i + 1}: ${Nilai} ( ${predikat} )`)
+    }
 }
 
-addEmployee('Bagas', 'Bagas@gmail.com', 2024);
-
-console.log(employees);
+try {
+    const NilaiSiswa = [97,23,67,78,89];
+    checkNilai(NilaiSiswa);
+} catch (e) {
+    console.error(e.message);
+}
