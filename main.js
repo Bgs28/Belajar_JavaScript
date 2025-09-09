@@ -123,7 +123,9 @@
 //     console.error(e.message);
 // }
 
-// ==> Module
+// ==> Module 
+// ==> import fungsi dari modul.mjs
+
 // import myfungsi from './modul.mjs';
 
 // myfungsi();
@@ -138,5 +140,6 @@
 
 // cara 2
 
-import * as mydata from './modul.mjs';
-console.log(mydata.name);
+// import * as mydata from './modul.mjs';
+// console.log(mydata.name);
+

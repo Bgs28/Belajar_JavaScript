@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container{
+        width: 300px;
+        margin: auto;
+        text-align: center;
+        border: 1px solid black;
+        padding: 10px;
+    }
+</style>
+<body>
+    <div id="container">
+        <p id="name"></p>
+        <p id="address"></p>
+        <p id="age"></p>
+    </div>
+    <script type="module">
+        import { name, address, age } from './modul.mjs';
+        document.getElementById('name').textContent = name;
+        document.getElementById('address').textContent = address;
+        document.getElementById('age').textContent = age;
+    </script>
+</body>
+</html>
