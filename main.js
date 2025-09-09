@@ -90,35 +90,53 @@
 
 // ==> Flow Controls
 
-function checkNilai(Nilais){
-    for (let i = 0; i < Nilais.length; i++){
-        if(typeof Nilais[i] !== "number"){
-            throw new Error("Invalid Input. Tolong Masukkan Nilai Array");
-        }
+// function checkNilai(Nilais){
+//     for (let i = 0; i < Nilais.length; i++){
+//         if(typeof Nilais[i] !== "number"){
+//             throw new Error("Invalid Input. Tolong Masukkan Nilai Array");
+//         }
 
-        const Nilai = Nilais[i];
-        let predikat;
+//         const Nilai = Nilais[i];
+//         let predikat;
 
-        if(Nilai >= 90){
-            predikat = "A";
-        }else if(Nilai >= 80){
-            predikat = "B";
-        }else if(Nilai >= 70){
-            predikat = "C";
-        }else if(Nilai >= 60){
-            predikat = "D";
-        }else{
-            predikat = "E";
-        }
+//         if(Nilai >= 90){
+//             predikat = "A";
+//         }else if(Nilai >= 80){
+//             predikat = "B";
+//         }else if(Nilai >= 70){
+//             predikat = "C";
+//         }else if(Nilai >= 60){
+//             predikat = "D";
+//         }else{
+//             predikat = "E";
+//         }
 
-        console.log(`Nilai ${i + 1}: ${Nilai} ( ${predikat} )`)
-    }
-}
+//         console.log(`Nilai ${i + 1}: ${Nilai} ( ${predikat} )`)
+//     }
+// }
 
 
-try {
-    const NilaiSiswa = [97,23,67,78,89];
-    checkNilai(NilaiSiswa);
-} catch (e) {
-    console.error(e.message);
-}
+// try {
+//     const NilaiSiswa = [97,23,67,78,89];
+//     checkNilai(NilaiSiswa);
+// } catch (e) {
+//     console.error(e.message);
+// }
+
+// ==> Module
+// import myfungsi from './modul.mjs';
+
+// myfungsi();
+
+// ==> import variabel dari modul.mjs
+
+// cara 1
+// import {name, address, age} from './modul.mjs';
+// console.log(name);
+// console.log(address);
+// console.log(age);
+
+// cara 2
+
+import * as mydata from './modul.mjs';
+console.log(mydata.name);
